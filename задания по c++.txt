@@ -1,0 +1,179 @@
+1 задание:
+#include <iostream>
+using namespace std;
+int main()
+{
+int i;
+cout << "Введите двухзначное число:" << endl;
+cin >> i;
+if (i<10 || i>99)
+{
+cout << "Ошибка" << endl;
+return 0;
+}
+
+int u = i/10;
+int y = i%10;
+
+int mi = min(u,y);
+int ma = max(u,y);
+
+cout << "Наименьшее число:" << mi << endl;
+cout << "Наибольшее число:" << ma << endl;
+
+return 0;
+}
+
+2 задание:
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int a, b;
+cout << "Введите начало отрезка [a]: ";
+cin >> a;
+cout << "Введите конец отрезка [b]: ";
+cin >> b;
+
+int lb = b / 4 - b / 100 + b / 400;
+int la= (a - 1) / 4 - (a - 1) / 100 + (a - 1) / 400;
+int l = lb - la;
+
+cout << "Колчество високосных лет на отрезке: " << l<< endl;
+
+return 0;
+}
+
+3 задание:
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+double x,y;
+
+cout << "Введите число x" << endl;
+cin >> x;
+cout << "Введите число y" << endl;
+cin >> y;
+
+double i = pow((1-tan(x)),1/tan(x)) + cos(x-y);
+cout << "Ответ:" << i << endl;
+return 0;
+}
+
+4 задание:
+#include <iostream>
+using namespace std;
+int main()
+{
+int n;
+cout << "Введите количество людей, проголосовавших за фильм:" << endl;
+cin >> n;
+float x,y;
+cout << "Рейтинг фильма изначально:" << endl;
+cin >> x;
+cout << "Рейтинг фильма потом:" << endl;
+cin >> y
+int edin = (n * (y - x)) / (1 - y);
+cout << "Ответ:" << edin << endl;
+return 0;
+}
+
+5 задание:
+#include <iostream>
+using namespace std;
+int main()
+{
+int x,y;
+cout << "Введите координаты точки:" << endl;
+cin >> x >> y;
+if (x!=0 && y!=0)
+{
+if (x>0 && y>0)
+{
+cout << "Точка находится в 1 четверти" << endl;
+return 0;
+}
+if (x<0 && y>0)
+{
+cout << "Точка находится в 2 четверти" << endl;
+return 0;
+}
+if (x<0 && y<0)
+{
+cout << "Точка находится в 3 четверти" << endl;
+return 0;
+}
+if (x>0 && y<0)
+{
+cout << "Точка находится в 4 четверти" << endl;
+return 0;
+}
+}
+return 0;
+}
+
+6 задание:
+#include <iostream>
+using namespace std;
+int main()
+{
+int a;
+cout << "Введите трехзначное число:" << endl;
+cin >> a;
+int b = a/100;
+int c = (a/10)%10;
+int d = a%10;
+if (b == c || c == d || d == b)
+{
+cout << "В числе есть одинаковые цифры" << endl;
+return 0;
+}
+else
+{
+cout << "В числе нет одинаковых чисел" << endl;
+return 0;
+}
+
+return 0;
+
+}
+
+7 задание:
+#include <iostream>
+using namespace std;
+int main()
+{
+int a;
+cout << "Введите пятизначное число:" << endl;
+cin >> a;
+if (a<10000 || a>99999)
+{
+cout << "Число не пятизначное" << endl;
+return 0;
+}
+else
+{
+int b = a/10000;
+int c = (a/1000)%10;
+int d = (a%100)/10;
+int f = a%10;
+
+if (b == f && c == d)
+{
+cout << "Число является палиндромом" << endl;
+return 0;
+
+}
+else
+{
+cout << "Число не является палиндромом" << endl;
+return 0;
+
+}
+}
+
+return 0;
+}
